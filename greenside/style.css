@@ -1,0 +1,600 @@
+/*
+Theme Name: Greenside
+Theme URI: https://github.com/WestCoastDigital/greenside
+Author: Jon Mather
+Author URI: https://workpowermedia.com.au
+Description: A simple one page theme to test css grids
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: grids, one page
+Text Domain: workpower
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	z-index: 2;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+	background: #f6f6f6;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.4;
+	font-size: 16px;
+	color: #666;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('img/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+.btn-wrapper {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.button {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background-color: #1e7a46;
+	border-left: none;
+    border-top: none;
+    border-right: none;
+	border-bottom: 4px solid #1b6d3f;
+	padding: 14px 20px;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 17px;
+	font-weight: 400;
+	border-radius: 4px;
+	transition: all 0.3s;
+	text-align: center;
+}
+
+.button:hover, .button:focus, .button:active {
+	background-color: #1b6d3f;
+}
+
+section {
+	padding: 120px 0;
+}
+
+.section-title {
+	font-size: 36px;
+	font-weight: 600;
+	color: #333;
+}
+
+.section-subtitle {
+	font-size: 22px;
+	color: #333;
+	margin: 20px 0;
+}
+
+.section-tagline {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.border {
+	margin-bottom: 40px;
+}
+
+.border:after {
+	content: '';
+	position: absolute;
+	border-bottom: 2px solid #1e7a46;
+	left: 0;
+	bottom: -10px;
+	width: 70px;
+}
+
+.masthead {	
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #eee;
+	z-index: 0;
+	padding-bottom: 200px;
+}
+
+.masthead:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+
+.masthead:after{
+    content: '';
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    background: #f6f6f6;
+    z-index: 1;
+    bottom: 0;
+	left: 0;
+    transform-origin: right bottom;
+    transform: skewY(-2deg);
+}
+
+.masthead a {
+	color: #eee;
+	text-decoration: none;
+}
+
+.masthead .logo {
+	padding-left: 20px;
+	padding-right: 20px;
+	align-self: center;
+}
+
+.masthead .navigation {
+	padding-left: 20px;
+	padding-right: 20px;
+	align-self: center;
+}
+
+.masthead .navigation .menu .menu-item {
+	list-style: none;
+	text-align: center;
+}
+
+.masthead .navigation.mobile .menu .menu-item {
+	border-radius: 0;
+}
+
+.masthead .navigation .menu .menu-item a {
+	text-decoration: none;
+	color: #eee;
+}
+
+.masthead .navigation .fa {
+	display: block;
+}
+
+.masthead .navigation.mobile .tooltip {
+	font-size: 5px;
+}
+
+.masthead .tagline {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 100px;
+	text-align: center;
+	font-size: 64px;
+	font-weight: 700;
+	letter-spoacing: -1px;
+}
+
+.masthead .hero-content {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	font-size: 19px;
+	font-weight: 300;
+}
+
+.masthead .btn-wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#about .btn-wrapper {
+	text-align: left;
+}
+
+#about .left {
+	align-self: center;
+}
+
+#about img {
+	box-shadow: 0 0 40px #ddd;
+	align-self: center;
+}
+
+#about .right {
+	align-self: center;
+}
+
+#services {
+	background: #fff;
+}
+
+#services:before{
+    content: '';
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    top: 0;
+	left: 0;
+    transform-origin: right bottom;
+    transform: skewY(2deg);
+}
+
+#services:after{
+    content: '';
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    background: #f6f6f6;
+    z-index: 1;
+    bottom: -80px;
+	left: 0;
+    transform-origin: right bottom;
+    transform: skewY(-2deg);
+}
+
+#services .section-title {
+	text-align: center;	
+}
+
+#services .section-title.border:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#services .service {
+	margin: 30px 0;
+}
+
+#services img {
+	width: 100%;
+	height: auto;
+	border-radius: 20px 20px 20px 0;
+}
+
+#services .section-subtitle {
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #333;
+	font-weight: 600;
+}
+
+#projects {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#projects .section-title {
+	text-align: center;	
+}
+
+#projects .section-title.border:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#projects nav {
+	margin: 40px 0;
+}
+
+#projects nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #333;
+	background-color: rgba(0,0,0,0);
+	border-bottom: 4px solid rgba(0,0,0,0);
+	padding: 14px 20px;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 17px;
+	font-weight: 400;
+	border-radius: 4px;
+	transition: all 0.3s;
+	text-align: center;	
+}
+
+#projects nav a.active {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background-color: #1e7a46;
+	border-bottom: 4px solid #1b6d3f;
+	padding: 14px 20px;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 17px;
+	font-weight: 400;
+	border-radius: 4px;
+	transition: all 0.3s;
+	text-align: center;
+}
+
+#projects img {
+	width: 100%;
+	height: auto;
+}
+
+#projects ul {
+	overflow: hidden;
+}
+
+#projects ul.hidden{
+	display: none;
+}
+
+#projects ul li {
+	list-style: none;
+}
+
+#testimonials {
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #fff;
+}
+
+#testimonials .section-title {
+	text-align: center;	
+}
+
+#testimonials .section-title.border:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#testimonials .fa-quote-left {
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 32px;
+	color: #e6e6e6;
+	margin-bottom: 20px;
+}
+
+#testimonials p {
+    color: #666;
+    font-weight: 400;
+    line-height: 32px;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#testimonials .author {
+    font-style: italic;
+}
+
+#testimonials .slick-dots {
+	margin-top: 30px;
+	list-style-position: inside;
+}
+
+#testimonials .slick-dots li {
+	cursor: pointer;	
+}
+
+#quote {
+	padding-left: 10%;
+	padding-right: 10%;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	color: #fff;
+	font-size: 28px;
+	text-transform: capitalize;
+	z-index: 1;
+}
+
+#quote:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+
+#contact {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#contact .section-title {
+	text-align: center;	
+}
+
+#contact .section-title.border:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#contact .gform_fields {
+	list-style: none;
+}
+
+#contact .gform_validation_container, .gfield_label {
+	display: none;
+}
+
+#contact .ginput_container.ginput_container_text {
+    width: 95%;
+}
+
+#contact form input, #contact form textarea {
+	width: 100%;
+	min-width: 50px;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.4;
+	font-family: 'Open Sans', sans-serif;
+    color: #444;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#contact .gform_button {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background-color: #1e7a46;
+	border-left: none;
+    border-top: none;
+    border-right: none;
+	border-bottom: 4px solid #1b6d3f;
+	padding: 14px 20px;
+	letter-spacing: 1px;
+	margin: 30px 0 0 0;
+	font-size: 17px;
+	font-weight: 400;
+	border-radius: 4px;
+	transition: all 0.3s;
+	text-align: center;
+	width: 50%;
+}
+
+#contact .gform_footer {
+    text-align: center;
+}
+
+#contact .contact-widgets {
+	margin-top: 50px;
+}
+
+#contact .contact-widgets .section-subtitle {
+	text-align: center;
+}
+
+#contact .contact-widgets .section-subtitle:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#contact .contact-widgets p {
+	text-align: center;
+}
+
+footer {
+	background: #333;
+	padding: 30px 0 20px;
+	text-align: center;
+}
+
+footer .social {
+	margin-bottom: 30px;
+}
+
+footer .social .menu-item {
+	list-style: none;
+	text-align: center;
+}
+
+footer .social .menu-item a {
+	font-size: 22px;
+	line-height: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background: #777;
+    color: #222;
+    border-radius: 50%;
+    transition: all 0.3s;
+	display: block;
+}
+
+footer .social .menu-item a:hover {
+	background: #f5f5f5;
+}
+
+#copyright a {
+	color: #666;
+	text-decoration: none;
+} 
+
+#copyright a:hover {
+	color: #f5f5f5;
+	text-decoration: none;
+} 
+
+@media screen and (max-width: 767px) {
+
+	section {
+		padding: 120px 15px;
+	}
+	
+	.masthead .btn-wrapper {
+		margin-top: 50px;
+	}
+	
+	#about img {
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		box-shadow: 0 0 40px #ddd;
+	}
+
+	#services:after{
+		content: '';
+		width: 100%;
+		height: 10%;
+		position: absolute;
+		background: #f6f6f6;
+		z-index: 1;
+		bottom: -200px;
+		left: 0;
+		transform-origin: right bottom;
+		transform: skewY(-2deg);
+	}
+	
+	#projects #navbar {
+		display: grid;
+		justify-content: space-around;
+	}
+	
+	#projects #navbar a {
+		font-size: 14px;
+		padding: 0;
+		background: rgba(0,0,0,0);
+		color: #333;
+		border: none;
+	}
+	
+	#projects #navbar a.active {
+		font-size: 14px;
+		padding: 0;
+		background: rgba(0,0,0,0);
+		color: #1e7a46;
+		border: none;
+	}
+	
+	#contact .ginput_container.ginput_container_text {
+		width: 100%;
+		margin: 10px 0;
+	}
+	
+	#contact .ginput_container {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	#contact .gform_button {
+		width: 100%;
+	}
+	
+	#testimonials p {
+		width: 100%;
+	}
+	
+}
